@@ -11,6 +11,7 @@ import com.sendgrid.helpers.mail.objects.Content;
 import com.sendgrid.helpers.mail.objects.Email;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -21,10 +22,9 @@ public class EmailService {
 
     private static Logger LOG = LoggerFactory.getLogger(EmailService.class);
 
+    @Autowired
     private SendGrid sendGrid;
-    public EmailService(SendGrid sendGrid) {
-        this.sendGrid = sendGrid;
-    }
+
 
     public void sendEmail(EmailDTO dto) {
         Email from = new Email(dto.getFromEmail(), dto.getFromName());
