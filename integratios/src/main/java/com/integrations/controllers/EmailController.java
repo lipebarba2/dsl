@@ -3,6 +3,7 @@ package com.integrations.controllers;
 
 import com.integrations.dto.EmailDTO;
 import com.integrations.services.EmailService;
+import com.integrations.services.SendGridEmailService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
